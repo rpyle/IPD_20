@@ -1,14 +1,11 @@
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
+team_name = '_____'
+strategy_name = 'Collude unless betrayed.'
+strategy_description = '''\
+Betray if ever betrayed.
+If I haven't been betrayed yet, I'll collude.
+'''
 
-team_name = 'E1'
-strategy_name = 'Betray'
-strategy_description = 'Always betray.'
+import random
     
 def move(my_history, their_history, my_score, their_score):
     '''Make my move based on the history with this player.
@@ -20,6 +17,8 @@ def move(my_history, their_history, my_score, their_score):
     
     Returns 'c' or 'b' for collude or betray.
     '''
-    
-    #This example player always betrays.      
-    return 'b'
+    # If the other player has betrayed or this is the last half of the game, 
+    if 'b' in their_history > 0: 
+        return 'b'               # Betray.
+    else:
+        return 'c'         # but 90% of the time collude
