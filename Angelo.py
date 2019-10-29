@@ -7,7 +7,11 @@
 ####
 
 
+<<<<<<< HEAD
 team_name = 'Angelo 2'
+=======
+team_name = 'Angelo'
+>>>>>>> 95a3dcce862f143f7ccda92cb549acc344a8452c
 strategy_name = 'Collude until betrayed'
 strategy_description = '''\
 Collude first round. Collude, unless betrayed; then always betray.'''
