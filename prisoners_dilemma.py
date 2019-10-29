@@ -41,11 +41,8 @@ import aiden
 #collude = example0
 
 modules = [example0, example1, example2, example3, example4, example5, example6, example7,
-<<<<<<< HEAD
            example8, aiden]
-=======
-           example8,aiden]
->>>>>>> 3095358149dcb1e65bf8f6e9574803cfba2c6828
+
 
 for module in modules:
     reload(module)
