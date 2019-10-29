@@ -7,7 +7,7 @@
 ####
 
 team_name = 'Mirna'
-strategy_name = 'Collude but retaliate'
+strategy_name = 'Collude but retaliate okay'
 strategy_description = '''\
 Collude first round. Betray second round. If player returns the same for the first two rounds, betray if they betrayed and collude if they colluded for those two rounds. Else, always betray.'''
     
