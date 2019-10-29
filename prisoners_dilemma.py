@@ -34,20 +34,12 @@ import random
 import os.path              
     
 import example0, example1, example2, example3
-<<<<<<< HEAD
-import example4, example5, example6, example7, example8, larry
-=======
 import example4, example5, example6, example7, example8
->>>>>>> 0a45826715f2b8806e2657dc3eedcbbdb19d9238
 
 #betray = example1
 #collude = example0
 
-<<<<<<< HEAD
-modules = [larry, example0, example1, example2, example3, example4, example5, example6, example7,
-=======
 modules = [example0, example1, example2, example3, example4, example5, example6, example7,
->>>>>>> 0a45826715f2b8806e2657dc3eedcbbdb19d9238
            example8]
 
 for module in modules:
