@@ -34,13 +34,14 @@ import random
 import os.path              
     
 import example0, example1, example2, example3
-import example4, example5, example6, example7, example8
+import example4, example5, example6, example7, example8, Robert
+import Robert
 
 #betray = example1
 #collude = example0
 
 modules = [example0, example1, example2, example3, example4, example5, example6, example7,
-           example8]
+           example8, Robert]
 
 for module in modules:
     reload(module)
