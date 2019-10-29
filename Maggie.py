@@ -9,6 +9,10 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'               
    else:
         if random.random()<0.20:
+   if 'b' in their_history[-15:]: # If the other player has betrayed within last 15 rounds, 
+        return 'b'               
+    else:
+        if random.random()<0.10:
           return 'b' 
         else:
             return 'c'         
