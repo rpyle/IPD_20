@@ -9,8 +9,11 @@
 team_name = 'jonacellus'
 strategy_name = 'betray after a certain amount of confessions'
 strategy_description = 'whenever the person concludes more than two times it will betray. Also when betrayed more than once it will start betraying from that point on'
+<<<<<<< HEAD
 
 import random
+=======
+>>>>>>> ea67dbaef1cc0dc312d055edf0d49568873da4b2
     
 def move(my_history, their_history, my_score, their_score):
     '''Make my move based on the history with this player.
@@ -23,6 +26,7 @@ def move(my_history, their_history, my_score, their_score):
     Returns 'c' or 'b' for collude or betray.
     '''
     
+<<<<<<< HEAD
     
     # This player will betray after a number of times of concluded
     if len(my_history)==0: # It's the first round:collude
@@ -58,6 +62,21 @@ def move(my_history, their_history, my_score, their_score):
             return 'b' # Betray if they were severely punished last time
         else:
             return 'c' # Otherwise collude.
+=======
+    # This player will betray after a number of times of concluded
+
+  if len(my_history)==0: # It's the first round: collude
+        return 'c'
+  
+  if 'b' in their_history[-10:]: # If the other player has betrayed within last 10 rounds, 
+        return 'b'               # Betray.
+    else:
+      if random.random()<.01:
+        return 'b' # 10% of the other round       
+      else:
+        return 'c'         # but 90% of the time collude
+    
+>>>>>>> ea67dbaef1cc0dc312d055edf0d49568873da4b2
     
     
     
