@@ -6,7 +6,11 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
+<<<<<<< HEAD
 team_name = 'Pyle 3'
+=======
+team_name = 'Pyle 2'
+>>>>>>> 06c8f816f8bc3cc42e41ed282a74ed109d0b0de0
 strategy_name = 'Collude'
 strategy_description = 'Always collude.'
     
