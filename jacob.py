@@ -20,4 +20,17 @@ def move(my_history, their_history, my_score, their_score):
     
     Returns 'c' or 'b' for collude or betray.
     '''
-    return 'b'
+
+    if len(my_history) == 0:
+      return 'b'
+    elif len(my_history) == 1:
+      return 'b'
+    elif len(my_history) == 2:
+      return 'c'
+    elif my_history[-1] == 'c':
+      return 'b'
+    elif my_history[-1] == 'b' and my_history[-2] == 'c':
+      return 'b'
+    elif my_history[-1] == 'b' and my_history[-2] == 'b':
+      return 'c'
+
