@@ -7,21 +7,37 @@
 ####
 
 team_name = 'KaraGrantham'
-strategy_name = 'Collude until betrayed'
-strategy_description = '''\
-Collude first round. Collude, unless betrayed; then always betray.'''
-    
+strategy_name = 'Collude with predictions'
+strategy_description = '''\Collude first round. Collude and check their values to try and predict their strategy and form a new strategy based off their moves.'''
+
 def move(my_history, their_history, my_score, their_score):
     '''Make my move based on the history with this player.
-    
+
     history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
+    their_history: a string of the same length as history, possibly empty.
     The first round between these two players is my_history[0] and their_history[0]
     The most recent round is my_history[-1] and their_history[-1]
-    
+
     Returns 'c' or 'b' for collude or betray.
     '''
-    if 'b' in their_history:
-        return 'b'
-    else:
+    moves = len(my_history)
+    movesOpp = len(their_history)
+    countC = their_history.count('c')
+    countB = their_history.count('b')
+    if movesOpp < 15:
         return 'c'
+    else:
+        if 'b' not in their_history:
+            return 'c'
+        elif 'c' not in their_history:
+            return 'b'
+        else:
+            if countB > 0.5* movesOpp:
+                if my_history[-1] == 0:
+                    return 'c'
+                else:
+                    return 'b'
+            elif countC > 0.5*movesOpp:
+                return 'c'
+            else:
+                return 'c'
