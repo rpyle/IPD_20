@@ -34,14 +34,14 @@ import random
 import os.path              
     
 import example0, example1, example2, example3
-import example4, example5, example6, example7, example8, Robert
-import Robert
+import example4, example5, example6, example7, example8
+import mirna
 
 #betray = example1
 #collude = example0
 
 modules = [example0, example1, example2, example3, example4, example5, example6, example7,
-           example8, Robert]
+           example8, mirna]
 
 for module in modules:
     reload(module)
@@ -378,4 +378,4 @@ def post_to_file(string, filename='tournament.txt', directory=''):
 ### Call main_play() if this file is executed
 if __name__ == '__main__':
     scores, moves, reports = main_play(modules)   
-    section0, section1, section2, section3 = reports
+   
