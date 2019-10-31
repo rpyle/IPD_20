@@ -8,15 +8,11 @@
 
 team_name = 'Justin Taing'
 strategy_name = 'Stop Snitching'
-strategy_description = 'Start out with a betray, if they betray you, switch to always betray'
+strategy_description = 'Start out with a betray, then switch to colluding twice to test out if the strategy '
 
 def move(my_history, their_history, my_score, their_score):
-  if len(my_history) == 0:
+    if len(my_history) <= 1:
+        return 'c'
+    if 'b' in their_history:
+        return 'b'
     return 'c'
-  elif len(my_history) < 3:
-    return 'b'
-  elif their_history[-1] or their_history[-2] == 'c':
-    return 'b'
-  else:
-    return their_history[-1]
-
