@@ -35,8 +35,8 @@ def move(my_history, their_history, my_score, their_score):
     if 'b' in their_history[-5:]: # If the other player has betrayed within last 5 rounds
       return 'b'               # Betray.
     else:
-      if random.random()<0.15:
-        return 'b' # 15% of the other round
+      if random.random()<0.01:
+        return 'b' # 1% of the other round
       else:
         return 'c'         # but 85% of the time collude
     if len(my_history)==0: # It's the first round: collude
@@ -64,4 +64,6 @@ def move(my_history, their_history, my_score, their_score):
             return 'c' # Otherwise collude.
 
     # This player will betray after a number of times of concluded and when betrayed the player will betray from that point on
+        if my_history[-1] == 'b' and their_history[-1] == 'b':
+            return b  #when the player betrays it will betray from that point one
 
