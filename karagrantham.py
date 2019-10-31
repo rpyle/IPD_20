@@ -20,11 +20,10 @@ def move(my_history, their_history, my_score, their_score):
 
     Returns 'c' or 'b' for collude or betray.
     '''
-    moves = len(my_history)
-    movesOpp = len(their_history)
+    actionOpp = len(their_history)
     countC = their_history.count('c')
     countB = their_history.count('b')
-    if movesOpp < 15:
+    if actionOpp < 10:
         return 'c'
     else:
         if 'b' not in their_history:
@@ -32,12 +31,12 @@ def move(my_history, their_history, my_score, their_score):
         elif 'c' not in their_history:
             return 'b'
         else:
-            if countB > 0.5* movesOpp:
+            if countB > 0.5 * actionOpp:
                 if my_history[-1] == 0:
                     return 'c'
                 else:
                     return 'b'
-            elif countC > 0.5*movesOpp:
+            elif countC > 0.5 * actionOpp:
                 return 'c'
             else:
-                return 'c'
+               return 'c'
