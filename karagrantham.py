@@ -37,6 +37,6 @@ def move(my_history, their_history, my_score, their_score):
                 else:
                     return 'b'
             elif countC > 0.5 * actionOpp:
-                return 'c'
+                return 'b'
             else:
                return 'c'
