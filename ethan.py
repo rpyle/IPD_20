@@ -9,10 +9,10 @@
 team_name = 'ethan'
 strategy_name = 'Stay Ahead'
 strategy_description = 'Always betray unless ahead'
-    
+
 def move(my_history, their_history, my_score, their_score):
   my_b = 0
-  their_b = 0 
+  their_b = 0
   for my_move in my_history:
     if my_move == 'b':
       my_b += 1
@@ -24,4 +24,3 @@ def move(my_history, their_history, my_score, their_score):
       return 'b'
     else:
       return 'c'
-  
