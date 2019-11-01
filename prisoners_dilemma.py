@@ -33,14 +33,14 @@ from __future__ import print_function
 import random
 import os.path
 
-import example0, example1, example2, example3
-import example4, example5, example6, example7, example8
-import mirna, adinhinesly, Joshua
+import aiden, Angelo, Brien, BungyChung, Devin, ethan, Joshua, justin_lee_master, justin_lee_slave
+import karagrantham, larry, Maggie, mirna, sub1
 
 #betray = example1
 #collude = example0
 
-modules = [mirna, adinhinesly, Joshua]
+modules = [aiden, Angelo, Brien, BungyChung, Devin, ethan, Joshua, justin_lee_master, justin_lee_slave,
+           karagrantham, larry, Maggie, mirna, sub1]
 
 for module in modules:
     reload(module)
@@ -376,8 +376,4 @@ def post_to_file(string, filename='tournament.txt', directory=''):
 
 ### Call main_play() if this file is executed
 if __name__ == '__main__':
-<<<<<<< HEAD
     scores, moves, reports = main_play(modules)
-=======
-    scores, moves, reports = main_play(modules)   
->>>>>>> d853f4c6766ea0ae96548ea52f977ccef10af0b7
