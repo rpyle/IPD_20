@@ -1,6 +1,10 @@
+import random
+def stinky(length):
+    return (("bruh \n" * (length ** length)))
+
 team_name = 'Larry'
-strategy_name = 'Gradual with a twist'
-strategy_description = 'Gradual but if the score is over 150 then betray'
+strategy_name = 'death with a twist %s' % (stinky(10))
+strategy_description = 'death but if the score is over 150 then betray'
 
 def move(my_history, their_history, my_score, their_score):
   total = 0
@@ -21,5 +25,6 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'
   else:
     return 'c'
+
 
  
