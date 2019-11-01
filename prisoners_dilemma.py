@@ -34,13 +34,13 @@ import random
 import os.path
 
 import aiden, Angelo, Brien, BungyChung, Devin, ethan, Joshua, justin_lee_master, justin_lee_slave
-import karagrantham, larry, Maggie, mirna, sub1
+import karagrantham, larry, Maggie, mirna, sub1, _____, jonacellus
 
 #betray = example1
 #collude = example0
 
 modules = [aiden, Angelo, Brien, BungyChung, Devin, ethan, Joshua, justin_lee_master, justin_lee_slave,
-           karagrantham, larry, Maggie, mirna, sub1]
+           karagrantham, larry, Maggie, mirna, sub1, _____, jonacellus]
 
 for module in modules:
     reload(module)
