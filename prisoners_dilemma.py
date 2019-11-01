@@ -40,18 +40,17 @@ import super_slave
 #betray = example1
 #collude = example0
 
-modules = [aiden, Angelo, Brien, BungyChung, Devin, ethan, Joshua, justin_lee_master, justin_lee_slave,
+def main_play():
+    modules = [aiden, Angelo, Brien, BungyChung, Devin, ethan, Joshua, justin_lee_master, justin_lee_slave,
            karagrantham, larry, Maggie, mirna, sub1, _____, jonacellus, Foroglio_1, jacob, mendoza, Sub2, Sub3,
            super_slave]
 
-for module in modules:
-    reload(module)
-    print ('reloaded',module)
-    for required_variable in ['team_name', 'strategy_name', 'strategy_description']:
-        if not hasattr(module, required_variable):
-            setattr(module, required_variable, 'missing assignment')
-
-def main_play(modules):
+    for module in modules:
+        reload(module)
+        print ('reloaded',module)
+        for required_variable in ['team_name', 'strategy_name', 'strategy_description']:
+            if not hasattr(module, required_variable):
+                setattr(module, required_variable, 'missing assignment')
     '''main_play plays a tournament and outputs results to screen and file.
     This function is called once when this file is executed.
     modules: a list of modules such as [team1, team2]
@@ -378,4 +377,4 @@ def post_to_file(string, filename='tournament.txt', directory=''):
 
 ### Call main_play() if this file is executed
 if __name__ == '__main__':
-    scores, moves, reports = main_play(modules)
+    scores, moves, reports = main_play()
