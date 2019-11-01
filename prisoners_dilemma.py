@@ -34,13 +34,15 @@ import random
 import os.path
 
 import aiden, Angelo, Brien, BungyChung, Devin, ethan, Joshua, justin_lee_master, justin_lee_slave
-import karagrantham, larry, Maggie, mirna, sub1, _____, jonacellus
+import karagrantham, larry, Maggie, mirna, sub1, _____, jonacellus, Foroglio_1, jacob, mendoza, Sub2, Sub3
+import super_slave
 
 #betray = example1
 #collude = example0
 
 modules = [aiden, Angelo, Brien, BungyChung, Devin, ethan, Joshua, justin_lee_master, justin_lee_slave,
-           karagrantham, larry, Maggie, mirna, sub1, _____, jonacellus]
+           karagrantham, larry, Maggie, mirna, sub1, _____, jonacellus, Foroglio_1, jacob, mendoza, Sub2, Sub3,
+           super_slave]
 
 for module in modules:
     reload(module)
@@ -377,4 +379,3 @@ def post_to_file(string, filename='tournament.txt', directory=''):
 ### Call main_play() if this file is executed
 if __name__ == '__main__':
     scores, moves, reports = main_play(modules)
-    
