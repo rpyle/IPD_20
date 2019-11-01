@@ -8,7 +8,7 @@
 
 team_name = 'Justin Taing'
 strategy_name = 'Stop Snitching'
-strategy_description = 'Start out with a betray, then switch to colluding twice to test out if the strategy '
+strategy_description = 'Start out with a collude, then check if they have betrayed in their history and then always betray endlessly'
 
 def move(my_history, their_history, my_score, their_score):
     if len(my_history) <= 1:
